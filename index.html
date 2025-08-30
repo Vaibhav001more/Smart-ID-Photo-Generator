@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Remover</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2 style="text-align:center;">✨ Background Remover</h2>
+
+    <!-- Upload Area -->
+    <div class="upload-area" id="uploadArea">
+      <p>📂 Drag & drop an image or <strong>click to upload</strong></p>
+      <input type="file" id="fileInput" accept="image/*" hidden>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-wrapper">
+      <progress id="progressBar" value="0" max="100"></progress>
+      <p id="statusText"></p>
+    </div>
+
+    <!-- Image Compare -->
+    <div class="image-compare">
+      <img id="originalImage" alt="">
+      <div class="slider" id="slider">
+        <img id="processedImage" alt="">
+        <div class="slider-handle"></div>
+      </div>
+    </div>
+    <input type="range" id="sliderInput" min="0" max="100" value="50">
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <button id="downloadBtn" class="primary-btn" disabled>⬇ Download</button>
+      <button id="themeToggle" class="secondary-btn">🌙 Toggle Theme</button>
+    </div>
+
+    <!-- Error / Success -->
+    <div id="errorBox"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
